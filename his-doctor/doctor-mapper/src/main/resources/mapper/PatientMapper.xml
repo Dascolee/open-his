@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dasco.openhis.mapper.PatientMapper">
+
+    <resultMap id="BaseResultMap" type="com.dasco.openhis.domain.Patient">
+            <id property="patientId" column="patient_id" jdbcType="VARCHAR"/>
+            <result property="name" column="name" jdbcType="VARCHAR"/>
+            <result property="phone" column="phone" jdbcType="VARCHAR"/>
+            <result property="sex" column="sex" jdbcType="CHAR"/>
+            <result property="birthday" column="birthday" jdbcType="VARCHAR"/>
+            <result property="idCard" column="id_card" jdbcType="CHAR"/>
+            <result property="address" column="address" jdbcType="VARCHAR"/>
+            <result property="allergyInfo" column="allergy_info" jdbcType="VARCHAR"/>
+            <result property="isFinal" column="is_final" jdbcType="CHAR"/>
+            <result property="password" column="password" jdbcType="VARCHAR"/>
+            <result property="openid" column="openid" jdbcType="VARCHAR"/>
+            <result property="lastLoginIp" column="last_login_ip" jdbcType="VARCHAR"/>
+            <result property="lastLoginTime" column="last_login_time" jdbcType="TIMESTAMP"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        patient_id,name,phone,
+        sex,birthday,id_card,
+        address,allergy_info,is_final,
+        password,openid,last_login_ip,
+        last_login_time,create_time,update_time
+    </sql>
+</mapper>

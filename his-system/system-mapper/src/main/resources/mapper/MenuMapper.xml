@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dasco.openhis.mapper.MenuMapper">
+
+    <resultMap id="BaseResultMap" type="com.dasco.openhis.domain.Menu">
+            <id property="menuId" column="menu_id" jdbcType="BIGINT"/>
+            <result property="menuType" column="menu_type" jdbcType="CHAR"/>
+            <result property="percode" column="percode" jdbcType="VARCHAR"/>
+            <result property="path" column="path" jdbcType="VARCHAR"/>
+            <result property="status" column="status" jdbcType="CHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+            <result property="createBy" column="create_by" jdbcType="VARCHAR"/>
+            <result property="updateBy" column="update_by" jdbcType="VARCHAR"/>
+            <result property="parentId" column="parent_id" jdbcType="BIGINT"/>
+            <result property="remark" column="remark" jdbcType="VARCHAR"/>
+            <result property="menuName" column="menu_name" jdbcType="VARCHAR"/>
+            <result property="parentIds" column="parent_ids" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        menu_id,menu_type,percode,
+        path,status,create_time,
+        update_time,create_by,update_by,
+        parent_id,remark,menu_name,
+        parent_ids
+    </sql>
+    <select id="queryMenuIdsByRoleId" resultType="java.lang.Long">
+        select main.menu_id from sys_role_menu main where main.role_id=#{roleId}
+                                                      and main.menu_id not in
+                                                          (select m.parent_id from sys_menu m inner join sys_role_menu rm on m.menu_id = rm.menu_id and rm.role_id=#{roleId})
+    </select>
+    <select id="queryChildCountByMenuId" resultType="java.lang.Long">
+        select count(1) from sys_menu where parent_id = #{menuId}
+    </select>
+</mapper>

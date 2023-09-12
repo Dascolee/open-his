@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dasco.openhis.mapper.RegisteredItemMapper">
+
+    <resultMap id="BaseResultMap" type="com.dasco.openhis.domain.RegisteredItem">
+            <id property="regItemId" column="reg_item_id" jdbcType="BIGINT"/>
+            <result property="regItemName" column="reg_item_name" jdbcType="VARCHAR"/>
+            <result property="regItemFee" column="reg_item_fee" jdbcType="DECIMAL"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+            <result property="createBy" column="create_by" jdbcType="VARCHAR"/>
+            <result property="updateBy" column="update_by" jdbcType="VARCHAR"/>
+            <result property="status" column="status" jdbcType="CHAR"/>
+            <result property="delFlag" column="del_flag" jdbcType="CHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        reg_item_id,reg_item_name,reg_item_fee,
+        create_time,update_time,create_by,
+        update_by,status,del_flag
+    </sql>
+</mapper>

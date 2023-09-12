@@ -1,0 +1,24 @@
+# Project exclude paths
+/config-server/target/
+/his-commons/target/
+/his-doctor/doctor-api/target/
+/his-doctor/doctor-domain/target/
+/his-doctor/doctor-mapper/target/
+/his-doctor/doctor-service/target/
+/his-erp/erp-api/target/
+/his-erp/erp-domain/target/
+/his-erp/erp-mapper/target/
+/his-erp/erp-service/target/
+/his-sms/sms-api/target/
+/his-sms/sms-domain/target/
+/his-sms/sms-mapper/target/
+/his-sms/sms-service/target/
+/his-statistics/statistics-api/target/
+/his-statistics/statistics-domain/target/
+/his-statistics/statistics-mapper/target/
+/his-statistics/statistics-service/target/
+/his-system/system-api/target/
+/his-system/system-domain/target/
+/his-system/system-mapper/target/
+/his-system/system-service/target/
+/his-system/system-web/target/

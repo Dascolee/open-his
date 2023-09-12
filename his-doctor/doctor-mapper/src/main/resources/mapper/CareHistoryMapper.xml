@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dasco.openhis.mapper.CareHistoryMapper">
+
+    <resultMap id="BaseResultMap" type="com.dasco.openhis.domain.CareHistory">
+            <id property="chId" column="ch_id" jdbcType="VARCHAR"/>
+            <result property="userId" column="user_id" jdbcType="BIGINT"/>
+            <result property="userName" column="user_name" jdbcType="VARCHAR"/>
+            <result property="patientId" column="patient_id" jdbcType="VARCHAR"/>
+            <result property="patientName" column="patient_name" jdbcType="VARCHAR"/>
+            <result property="deptId" column="dept_id" jdbcType="BIGINT"/>
+            <result property="deptName" column="dept_name" jdbcType="VARCHAR"/>
+            <result property="receiveType" column="receive_type" jdbcType="CHAR"/>
+            <result property="isContagious" column="is_contagious" jdbcType="CHAR"/>
+            <result property="careTime" column="care_time" jdbcType="TIMESTAMP"/>
+            <result property="caseDate" column="case_date" jdbcType="VARCHAR"/>
+            <result property="regId" column="reg_id" jdbcType="VARCHAR"/>
+            <result property="caseTitle" column="case_title" jdbcType="VARCHAR"/>
+            <result property="caseResult" column="case_result" jdbcType="VARCHAR"/>
+            <result property="doctorTips" column="doctor_tips" jdbcType="VARCHAR"/>
+            <result property="remark" column="remark" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        ch_id,user_id,user_name,
+        patient_id,patient_name,dept_id,
+        dept_name,receive_type,is_contagious,
+        care_time,case_date,reg_id,
+        case_title,case_result,doctor_tips,
+        remark
+    </sql>
+</mapper>

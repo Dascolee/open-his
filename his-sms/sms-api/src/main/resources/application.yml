@@ -1,0 +1,10 @@
+api_url:
+  https://openapi.danmi.com/distributor/sendSMS
+account_sid:
+  46c04471661b40f2c2c601b05d1a23bf
+auth_token:
+  ecdd901e291af3d7d84397da2fd56def
+template_id:
+  307852
+resp_data_type:
+  JSON

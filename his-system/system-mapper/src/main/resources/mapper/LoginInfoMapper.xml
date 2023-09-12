@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dasco.openhis.mapper.LoginInfoMapper">
+
+    <resultMap id="BaseResultMap" type="com.dasco.openhis.domain.LoginInfo">
+            <id property="infoId" column="info_id" jdbcType="BIGINT"/>
+            <result property="browser" column="browser" jdbcType="VARCHAR"/>
+            <result property="userName" column="user_name" jdbcType="VARCHAR"/>
+            <result property="loginAccount" column="login_account" jdbcType="VARCHAR"/>
+            <result property="msg" column="msg" jdbcType="VARCHAR"/>
+            <result property="loginTime" column="login_time" jdbcType="TIMESTAMP"/>
+            <result property="loginStatus" column="login_status" jdbcType="CHAR"/>
+            <result property="loginType" column="login_type" jdbcType="CHAR"/>
+            <result property="ipAddr" column="ip_addr" jdbcType="VARCHAR"/>
+            <result property="loginLocation" column="login_location" jdbcType="VARCHAR"/>
+            <result property="os" column="os" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        info_id,browser,user_name,
+        login_account,msg,login_time,
+        login_status,login_type,ip_addr,
+        login_location,os
+    </sql>
+</mapper>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dasco.openhis.mapper.PurchaseMapper">
+
+    <resultMap id="BaseResultMap" type="com.dasco.openhis.domain.Purchase">
+            <id property="purchaseId" column="purchase_id" jdbcType="VARCHAR"/>
+            <result property="providerId" column="provider_id" jdbcType="VARCHAR"/>
+            <result property="purchaseTradeTotalAmount" column="purchase_trade_total_amount" jdbcType="DECIMAL"/>
+            <result property="status" column="status" jdbcType="CHAR"/>
+            <result property="applyUserId" column="apply_user_id" jdbcType="BIGINT"/>
+            <result property="applyUserName" column="apply_user_name" jdbcType="VARCHAR"/>
+            <result property="storageOptUser" column="storage_opt_user" jdbcType="VARCHAR"/>
+            <result property="storageOptTime" column="storage_opt_time" jdbcType="TIMESTAMP"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+            <result property="createBy" column="create_by" jdbcType="VARCHAR"/>
+            <result property="updateBy" column="update_by" jdbcType="VARCHAR"/>
+            <result property="examine" column="examine" jdbcType="VARCHAR"/>
+            <result property="auditMsg" column="audit_msg" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        purchase_id,provider_id,purchase_trade_total_amount,
+        status,apply_user_id,apply_user_name,
+        storage_opt_user,storage_opt_time,create_time,
+        update_time,create_by,update_by,
+        examine,audit_msg
+    </sql>
+</mapper>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dasco.openhis.mapper.VerificationCodeMapper">
+
+    <resultMap id="BaseResultMap" type="com.dasco.openhis.domain.VerificationCode">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="verificationCode" column="verification_code" jdbcType="INTEGER"/>
+            <result property="phoneNumber" column="phone_number" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="isCheck" column="is_check" jdbcType="BIT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,verification_code,phone_number,
+        create_time,is_check
+    </sql>
+</mapper>

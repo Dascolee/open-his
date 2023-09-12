@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dasco.openhis.mapper.CareOrderItemMapper">
+
+    <resultMap id="BaseResultMap" type="com.dasco.openhis.domain.CareOrderItem">
+            <id property="itemId" column="item_id" jdbcType="VARCHAR"/>
+            <result property="coId" column="co_id" jdbcType="VARCHAR"/>
+            <result property="itemRefId" column="item_ref_id" jdbcType="VARCHAR"/>
+            <result property="itemName" column="item_name" jdbcType="VARCHAR"/>
+            <result property="itemType" column="item_type" jdbcType="CHAR"/>
+            <result property="num" column="num" jdbcType="DECIMAL"/>
+            <result property="price" column="price" jdbcType="DECIMAL"/>
+            <result property="amount" column="amount" jdbcType="DECIMAL"/>
+            <result property="remark" column="remark" jdbcType="VARCHAR"/>
+            <result property="status" column="status" jdbcType="CHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        item_id,co_id,item_ref_id,
+        item_name,item_type,num,
+        price,amount,remark,
+        status,create_time
+    </sql>
+</mapper>

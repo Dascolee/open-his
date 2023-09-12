@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dasco.openhis.mapper.OrderBackfeeItemMapper">
+
+    <resultMap id="BaseResultMap" type="com.dasco.openhis.domain.OrderBackfeeItem">
+            <id property="itemId" column="item_id" jdbcType="VARCHAR"/>
+            <result property="coId" column="co_id" jdbcType="VARCHAR"/>
+            <result property="itemName" column="item_name" jdbcType="VARCHAR"/>
+            <result property="itemPrice" column="item_price" jdbcType="DECIMAL"/>
+            <result property="itemNum" column="item_num" jdbcType="INTEGER"/>
+            <result property="itemAmount" column="item_amount" jdbcType="DECIMAL"/>
+            <result property="backId" column="back_id" jdbcType="VARCHAR"/>
+            <result property="itemType" column="item_type" jdbcType="CHAR"/>
+            <result property="status" column="status" jdbcType="CHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        item_id,co_id,item_name,
+        item_price,item_num,item_amount,
+        back_id,item_type,status
+    </sql>
+</mapper>

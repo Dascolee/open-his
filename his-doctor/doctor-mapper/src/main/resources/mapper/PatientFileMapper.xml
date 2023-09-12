@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dasco.openhis.mapper.PatientFileMapper">
+
+    <resultMap id="BaseResultMap" type="com.dasco.openhis.domain.PatientFile">
+            <id property="patientId" column="patient_id" jdbcType="VARCHAR"/>
+            <result property="emergencyContactName" column="emergency_contact_name" jdbcType="VARCHAR"/>
+            <result property="emergencyContactPhone" column="emergency_contact_phone" jdbcType="VARCHAR"/>
+            <result property="emergencyContactRelation" column="emergency_contact_relation" jdbcType="VARCHAR"/>
+            <result property="leftEarHearing" column="left_ear_hearing" jdbcType="VARCHAR"/>
+            <result property="rightEarHearing" column="right_ear_hearing" jdbcType="VARCHAR"/>
+            <result property="leftVision" column="left_vision" jdbcType="DECIMAL"/>
+            <result property="rightVision" column="right_vision" jdbcType="DECIMAL"/>
+            <result property="height" column="height" jdbcType="DECIMAL"/>
+            <result property="weight" column="weight" jdbcType="DECIMAL"/>
+            <result property="bloodType" column="blood_type" jdbcType="VARCHAR"/>
+            <result property="personalInfo" column="personal_info" jdbcType="VARCHAR"/>
+            <result property="familyInfo" column="family_info" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        patient_id,emergency_contact_name,emergency_contact_phone,
+        emergency_contact_relation,left_ear_hearing,right_ear_hearing,
+        left_vision,right_vision,height,
+        weight,blood_type,personal_info,
+        family_info,create_time,update_time
+    </sql>
+</mapper>

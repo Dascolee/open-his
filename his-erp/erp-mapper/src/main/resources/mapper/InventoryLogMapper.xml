@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dasco.openhis.mapper.InventoryLogMapper">
+
+    <resultMap id="BaseResultMap" type="com.dasco.openhis.domain.InventoryLog">
+            <id property="inventoryLogId" column="inventory_log_id" jdbcType="VARCHAR"/>
+            <result property="purchaseId" column="purchase_id" jdbcType="VARCHAR"/>
+            <result property="medicinesId" column="medicines_id" jdbcType="VARCHAR"/>
+            <result property="inventoryLogNum" column="inventory_log_num" jdbcType="INTEGER"/>
+            <result property="tradePrice" column="trade_price" jdbcType="DECIMAL"/>
+            <result property="prescriptionPrice" column="prescription_price" jdbcType="DECIMAL"/>
+            <result property="tradeTotalAmount" column="trade_total_amount" jdbcType="DECIMAL"/>
+            <result property="prescriptionTotalAmount" column="prescription_total_amount" jdbcType="DECIMAL"/>
+            <result property="batchNumber" column="batch_number" jdbcType="VARCHAR"/>
+            <result property="medicinesName" column="medicines_name" jdbcType="VARCHAR"/>
+            <result property="medicinesType" column="medicines_type" jdbcType="CHAR"/>
+            <result property="prescriptionType" column="prescription_type" jdbcType="CHAR"/>
+            <result property="producterId" column="producter_id" jdbcType="VARCHAR"/>
+            <result property="conversion" column="conversion" jdbcType="INTEGER"/>
+            <result property="unit" column="unit" jdbcType="VARCHAR"/>
+            <result property="providerId" column="provider_id" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="createBy" column="create_by" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        inventory_log_id,purchase_id,medicines_id,
+        inventory_log_num,trade_price,prescription_price,
+        trade_total_amount,prescription_total_amount,batch_number,
+        medicines_name,medicines_type,prescription_type,
+        producter_id,conversion,unit,
+        provider_id,create_time,create_by
+    </sql>
+</mapper>
